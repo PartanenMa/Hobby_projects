@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/cascadia-code" rel="stylesheet">
+    <title>CV</title>
+    <style>
+        body {
+            background-color: black;
+            background-image: url("./images/background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            height: 2000px;
+            width: 1080px;
+            margin: auto;
+            border-radius: 30px;
+        }
+
+        /*Header style:*/
+        header {
+            height: 23%;
+            background-image: url("./images/header_background_1.jpg");
+            background-size: cover;
+            background-position: center;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+
+        header aside {
+            display: none;
+            height: 100%;
+            width: 50%;
+            padding-left: 15px;
+            float: right;
+            font-style: italic;
+            background-image: url("./images/header_background_2.jpg");
+            background-size: cover;
+            border-top-right-radius: 30px;
+        }
+
+        header aside h2 {
+            color: skyblue;
+        }
+
+        .phone {
+            height: 100px;
+            width: 510px;
+            background-color: skyblue;
+            border-radius: 10px;
+            padding-left: 10px;
+        }
+
+        .phone h3 {
+            font-family: 'Cascadia Code', sans-serif;
+            color: green;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+
+        .phone p {
+            font-family: 'Cascadia Code', sans-serif;
+            color: white;
+            padding-left: 10px;
+        }
+
+        .phone p:hover {
+            color: green;
+            background-color: lightgreen;
+            width: 100px;
+            border-radius: 30px;
+        }
+
+        .email {
+            height: 100px;
+            width: 510px;
+            background-color: skyblue;
+            border-radius: 10px;
+            padding-left: 10px;
+        }
+
+        .email h3 {
+            font-family: 'Cascadia Code', sans-serif;
+            color: red;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+
+        .email p {
+            font-family: 'Cascadia Code', sans-serif;
+            color: white;
+            padding-left: 10px;
+        }
+
+        .email p:hover {
+            color: red;
+            background-color: salmon;
+            width: 250px;
+            border-radius: 30px;
+        }
+
+        .linkedin {
+            height: 100px;
+            width: 510px;
+            background-color: skyblue;
+            border-radius: 10px;
+            padding-left: 10px;
+        }
+
+        .linkedin h3 {
+            font-family: 'Cascadia Code', sans-serif;
+            color: blue;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+
+        .linkedin a {
+            font-family: 'Cascadia Code', sans-serif;
+            color: white;
+            padding-left: 10px;
+        }
+
+        .linkedin a:hover {
+            color: blue;
+            background-color: lightblue;
+            width: 500px;
+            border-radius: 30px;
+        }
+
+        header #img1 {
+            height: 200px;
+            width: 160px;
+            padding-top: 10px;
+            padding-left: 10px;
+            border-radius: 30px;
+            box-shadow: 2px 2px skyblue;
+        }
+
+        header #img2 {
+            height: 200px;
+            width: 300px;
+            padding-top: 10px;
+            padding-left: 30px;
+        }
+
+        header h1 {
+            font-family: 'Cascadia Code', sans-serif;
+            color: skyblue;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+
+        header h1:hover {
+            background-color: blue;
+            width: 260px;
+            border-radius: 10px;
+        }
+
+        header h2 {
+            font-family: 'Cascadia Code', sans-serif;
+            color: skyblue;
+            padding-left: 10px;
+        }
+
+        header h2:hover {
+            background-color: blue;
+            width: 460px;
+            border-radius: 10px;
+        }
+
+        #ShowContact {
+            font-family: 'Cascadia Code', sans-serif;
+            font-size: 20px;
+            background-color: skyblue;
+            color: white;
+            height: 50px;
+            width: 200px;
+            border-radius: 30px;
+            padding-left: 10px;
+        }
+
+        #ShowContact:hover {
+            background-color: blue;
+        }
+
+        #HideContact {
+            display: none;
+            font-family: 'Cascadia Code', sans-serif;
+            font-size: 20px;
+            background-color: skyblue;
+            color: white;
+            height: 50px;
+            width: 200px;
+            border-radius: 30px;
+            padding-left: 10px;
+        }
+
+        #HideContact:hover {
+            background-color: red;
+        }
+
+        /*Main style:*/
+        main {
+            height: 57%;
+            background-image: url("./images/main_background.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .main_container {
+            height: 100%;
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        #ShowAboutMe {
+            display: block;
+            font-family: 'Cascadia Code', sans-serif;
+            font-size: 50px;
+            background-color: skyblue;
+            color: white;
+            height: 150px;
+            width: 600px;
+            border-radius: 30px;
+            padding-left: 10px;
+            margin-bottom: 100px;
+        }
+
+        #ShowAboutMe:hover {
+            background-color: blue;
+        }
+
+        #about_me {
+            display: none;
+            height: 37%;
+            background-color:gray;
+            background-size: cover;
+            background-position: center;
+            border-radius: 30px;
+        }
+
+        #about_me h2 {
+            font-family: 'Cascadia Code', sans-serif;
+            font-style: italic;
+            color: skyblue;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+
+        #about_me p {
+            font-family: 'Cascadia Code', sans-serif;
+            font-style: italic;
+            font-size: 20px;
+            color: white;
+            padding-left: 10px;
+        }
+
+        #HideAboutMe {
+            display: none;
+            font-family: 'Cascadia Code', sans-serif;
+            font-size: 20px;
+            background-color: skyblue;
+            color: white;
+            height: 50px;
+            width: 200px;
+            border-radius: 30px;
+            padding-left: 10px;
+        }
+
+        #HideAboutMe:hover {
+            background-color: red;
+        }
+
+        #ShowSkills {
+            display: block;
+            font-family: 'Cascadia Code', sans-serif;
+            font-size: 50px;
+            background-color: skyblue;
+            color: white;
+            height: 150px;
+            width: 600px;
+            border-radius: 30px;
+            padding-left: 10px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        #ShowSkills:hover {
+            background-color: blue;
+        }
+
+        #skills {
+            display: none;
+            height: 35%;
+            background-color:gray;
+            background-size: cover;
+            background-position: center;
+            border-radius: 30px;
+        }
+
+        #skills h2 {
+            font-family: 'Cascadia Code', sans-serif;
+            font-style: italic;
+            color: skyblue;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+
+        #skills p {
+            font-family: 'Cascadia Code', sans-serif;
+            font-style: italic;
+            font-size: 20px;
+            color: white;
+            padding-left: 10px;
+        }
+
+        #HideSkills {
+            display: none;
+            font-family: 'Cascadia Code', sans-serif;
+            font-size: 20px;
+            background-color: skyblue;
+            color: white;
+            height: 50px;
+            width: 200px;
+            border-radius: 30px;
+            padding-left: 10px;
+        }
+
+        #HideSkills:hover {
+            background-color: red;
+        }
+
+        #ShowProjects {
+            display: block;
+            font-family: 'Cascadia Code', sans-serif;
+            font-size: 50px;
+            background-color: skyblue;
+            color: white;
+            height: 150px;
+            width: 600px;
+            border-radius: 30px;
+            padding-left: 10px;
+            margin-top: 100px;
+        }
+
+        #ShowProjects:hover {
+            background-color: blue;
+        }
+
+        #projects {
+            display: none;
+            height: 20%;
+            background-color:gray;
+            background-size: cover;
+            background-position: center;
+            border-radius: 30px;
+        }
+
+        #projects h2 {
+            font-family: 'Cascadia Code', sans-serif;
+            font-style: italic;
+            color: skyblue;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+
+        #projects p {
+            font-family: 'Cascadia Code', sans-serif;
+            font-style: italic;
+            font-size: 20px;
+            color: white;
+            padding-left: 10px;
+        }
+
+        #projects h3 {
+            font-family: 'Cascadia Code', sans-serif;
+            color: white;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+
+        #projects a {
+            font-family: 'Cascadia Code', sans-serif;
+            color: white;
+            padding-left: 10px;
+        }
+
+        #HideProjects {
+            display: none;
+            font-family: 'Cascadia Code', sans-serif;
+            font-size: 20px;
+            background-color: skyblue;
+            color: white;
+            height: 50px;
+            width: 200px;
+            border-radius: 30px;
+            padding-left: 10px;
+        }
+
+        #HideProjects:hover {
+            background-color: red;
+        }
+
+        /*Footer style:*/
+        footer {
+            height: 20%;
+            background-image: url("./images/footer_background.png");
+            background-size: 70%;
+            background-color: black;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        .footer_container_1 {
+            height: 100%;
+            width: 200px;
+            float: right;
+            background-color: red;
+            border-bottom-right-radius: 10px;
+            padding-left: 10px;
+        }
+
+        .footer_container_1 h3 {
+            font-family: 'Cascadia Code', sans-serif;
+            color: white;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+
+        #second_page_link {
+            font-family: 'Cascadia Code', sans-serif;
+            color: white;
+            padding-left: 10px;
+        }
+        #second_page_link:hover {
+            background-color:darkred;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <aside id="contact">
+                <h2>CONTACT</h2>
+                <div class="phone">
+                    <h3>Phone</h3>
+                    <p>0440602810</p>
+                </div>
+                <div class="email">
+                    <h3>Email</h3>
+                    <p>manu111.partanen@gmail.com</p>
+                </div>
+                <div class="linkedin">
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/manu-partanen-7864b4265/">https://www.linkedin.com/in/manu-partanen-7864b4265/</a>
+                </div>
+            </aside>
+            <img id="img1" src="./images/image.jpeg" alt="image1">
+            <img id="img2" src="./images/languages.png" alt="image2">
+            <h1 id="name">Manu Partanen</h1>
+            <h2 id="job">IT automation engineer - student</h2>
+            <button id="ShowContact" onclick="ShowContactInfo()">CONTACT</button>
+            <button id="HideContact" onclick="HideContactInfo()">HIDE CONTACT</button>
+        </header>
+        <main>
+            <div class="main_container">
+                <button id="ShowAboutMe" onclick="ShowAboutMeInfo()">ABOUT ME</button>
+                <section id="about_me">
+                    <h2>About me</h2>
+                    <p>
+                        I am a second-year student at Satakunta University of Applied Sciences. I am
+                        studying the IT orientation of Electrical and Automation Technology. My plan is to
+                        <br>graduate in the spring of 2025 at the latest. I have a high school diploma, and I have
+                        completed my mandatory military service.
+                        <br>
+                        <br>I have always been fascinated by the IT field and especially programming. When I started
+                        self-studying programming in Java, within about a year I knew that this is exactly
+                        <br>the right job for me. I decided to apply to a university of applied sciences to strengthen
+                        my skills even more, and to make a career out of programming. Through the courses,
+                        <br>I have gained experience in several different programming languages ​​such as C++, Java and
+                        C#. I have also studied the development of web systems, as well as
+                        <br>data analytics and building databases.
+                    </p>
+                    <button id="HideAboutMe" onclick="HideAboutMeInfo()">HIDE ABOUT ME</button>
+                </section>
+                <button id="ShowSkills" onclick="ShowSkills()">SKILLS</button>
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <p>
+                        I'm comfortable working with languages such as C++, Java and C#. I've used them mostly in 
+                        <br> my school projects. I'm most comfortable working with Java though because I started 
+                        <br>my programming journey with it about 1 year before I started studying at SAMK.
+                        <br>
+                        <br>Most of my programming experience is from web development. I like developing frontend 
+                        <br>web applications with React, or with just plain HTML, CSS and JavaScript, and I have 
+                        <br>some experience working with Node.js and FastAPI on the backend.
+                        <br>
+                        <br>My knowledge about databases is pretty basic, having been studied some SQL and NoSQL. 
+                        <br>I've also done some data analysis with python and excel, and studied machine learning 
+                        <br>and deep learning.
+                    </p>
+                    <button id="HideSkills" onclick="HideSkills()">HIDE SKILLS</button>
+                </section>
+                <button id="ShowProjects" onclick="ShowProjects()">PROJECTS</button>
+                <section id="projects">
+                    <h2>Projects</h2>
+                    <p>
+                        Check out my projects on GitHub!
+                        <br>
+                    </p>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/PartanenMa">https://github.com/PartanenMa</a>
+                    <button id="HideProjects" onclick="HideProjects()">HIDE PROJECTS</button>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="footer_container_1">
+                <h3>Second page</h3>
+                <a id="second_page_link" href="./lol.html">Go to second page</a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        //Header script:
+        function ShowContactInfo() {
+            document.getElementById("contact").style.display = "block";
+            document.getElementById("HideContact").style.display = "block";
+        }
+
+        function HideContactInfo() {
+            document.getElementById("contact").style.display = "none";
+            document.getElementById("HideContact").style.display = "none";
+        }
+
+        //Main script:
+        function ShowAboutMeInfo() {
+            document.getElementById("about_me").style.display = "block";
+            document.getElementById("ShowAboutMe").style.display = "none";
+            document.getElementById("HideAboutMe").style.display = "block";
+        }
+
+        function HideAboutMeInfo() {
+            document.getElementById("about_me").style.display = "none";
+            document.getElementById("ShowAboutMe").style.display = "block";
+            document.getElementById("HideAboutMe").style.display = "none";
+        }
+
+        function ShowSkills() {
+            document.getElementById("skills").style.display = "block";
+            document.getElementById("ShowSkills").style.display = "none";
+            document.getElementById("HideSkills").style.display = "block";
+        }
+
+        function HideSkills() {
+            document.getElementById("skills").style.display = "none";
+            document.getElementById("ShowSkills").style.display = "block";
+            document.getElementById("HideSkills").style.display = "none";
+        }
+
+        function ShowProjects() {
+            document.getElementById("projects").style.display = "block";
+            document.getElementById("ShowProjects").style.display = "none";
+            document.getElementById("HideProjects").style.display = "block";
+        }
+
+        function HideProjects() {
+            document.getElementById("projects").style.display = "none";
+            document.getElementById("ShowProjects").style.display = "block";
+            document.getElementById("HideProjects").style.display = "none";
+        }
+
+        //Footer script:
+
+    </script>
+</body>
+
+</html>
