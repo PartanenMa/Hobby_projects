@@ -1,0 +1,97 @@
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.TodoAppContainer {
+  background-color: #333;
+  height: 600px;
+  width: 500px;
+  border: 1px solid deepskyblue;
+  filter: drop-shadow(0 0 2em deepskyblue);
+  border-radius: 10px;
+  padding: 10px;
+  position: center;
+}
+
+.TodoAppContainer h3 {
+  color: deepskyblue;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.TodoAppContainer input {
+  background-color: deepskyblue;
+  color: #333;
+  height: 48px;
+  width: 207px;
+  font-size: 30px;
+  font-style: italic;
+  border-radius: 50px;
+  will-change: filter;
+  transition: filter 300ms;
+  padding-left: 15px;
+}
+
+.TodoAppContainer input:hover {
+  background-color: lightblue;
+  filter: drop-shadow(0 0 2em deepskyblue);
+}
+
+.TodoAppContainer button {
+  background-color: #333;
+  color: deepskyblue;
+  height: 48px;
+  width: 135px;
+  border-radius: 10px;
+  border: 1px solid deepskyblue;
+  font-size: 25px;
+  font-style: italic;
+  padding: 5px;
+  position: relative;
+  left: 20px;
+}
+
+.TodoAppContainer button:hover {
+  background-color: lightblue;
+  transition: background-color 500ms ease-in-out;
+  filter: drop-shadow(0 0 2em deepskyblue);
+}
+
+.Todo {
+  background-color: #333;
+  height: 80px;
+  width: 350px;
+  border: 1px solid deepskyblue;
+  border-radius: 10px;
+  position: relative;
+  right: 30px;
+}
+
+.Todo:hover {
+  background-color: lightblue;
+  transition: background-color 500ms ease-in-out;
+  filter: drop-shadow(0 0 2em deepskyblue);
+}
+
+.Todo .p1 {
+  color: deepskyblue;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  position: relative;
+  bottom: 10px;
+  left: 10px;
+}
+
+.TodoAppContainer .p2 {
+  color: deepskyblue;
+  font-size: 20px;
+  font-style: italic;
+  height: fit-content;
+  width: fit-content;
+  position: relative;
+  bottom: 20px;
+  left: 10px;
+}
