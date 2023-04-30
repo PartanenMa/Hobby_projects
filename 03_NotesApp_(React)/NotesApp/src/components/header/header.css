@@ -1,0 +1,17 @@
+.HeaderContainer {
+    background-color: black;
+    height: 100px;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.HeaderContainer h1 {
+    color: white;
+    font-size: 80px;
+    position: relative;
+    bottom: 55px;
+}

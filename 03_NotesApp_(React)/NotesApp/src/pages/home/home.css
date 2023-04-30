@@ -1,0 +1,58 @@
+.HomePageContainer {
+    background-color: gray;
+    height: 490px;
+    width: 1000px;
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.ButtonContainer {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.Buttons {
+    height: 100%;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.Actions {
+    color: white;
+    height: 60px;
+    width: 300px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.HomePageContainer button {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 60px;
+    width: 300px;
+    font-size: 30px;
+}
+
+.HomePageContainer button:hover {
+    background-color: gray;
+    transition: background-color 500ms ease-in-out;
+}
+
+.HomePageContainer .Image {
+    background-image: url("/src/assets/img/notes.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 50%;
+}
