@@ -1,0 +1,31 @@
+.DisplayNotesPageContainer {
+    background-color: gray;
+    height: 490px;
+    width: 1000px;
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.DisplayNotesContent {
+    background-color: blue;
+    height: 100%;
+    width: 60%;
+}
+
+.DisplayNotesContent button {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 60px;
+    width: 300px;
+    font-size: 30px;
+}
+
+.DisplayNotesContent button:hover {
+    background-color: gray;
+    transition: background-color 500ms ease-in-out;
+}
