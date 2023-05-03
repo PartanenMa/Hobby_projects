@@ -2,23 +2,30 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "/src/components/header/header.jsx";
 import Dropdown from "/src/components/dropdown/dropdown.jsx";
+import CourseOptions from "/src/features/course_options/course_options.jsx";
 import "./add_note.css";
 
 function AddNotePage() {
   const navigate = useNavigate();
   const [selectedCourse, setSelectedCourse] = useState("");
+  const [Add, setAdd] = useState(false);
+  const [Added, setAdded] = useState(true);
 
   function AddNote() {
     const textField = document.getElementById("ta1");
-
-    if (textField.value = "Text area cannot be empty!") {
-        textField.value = "";
-    } else if (textField.value == "Note added to course!") {
-      textField.value = "";
-    } else if (textField.value == "") {
-        textField.value = "Text area cannot be empty!";
+    setAdded(true);
+    setAdd(false);
+    if (textField.value.trim() == "") {
+      textField.value = "Text area cannot be empty!";
     } else {
-        textField.value = "Note added to course!";
+      const newNote = { text: textField.value };
+      const selectedCourseIndex = CourseOptions.findIndex(
+        (course) => course.course == selectedCourse
+      );
+      CourseOptions[selectedCourseIndex].notes.push(newNote);
+      textField.value = "";
+      setAdd(true);
+      setAdded(false);
     }
   }
 
@@ -32,16 +39,9 @@ function AddNotePage() {
     setSelectedCourse(selectedOption);
   };
 
-  const courseOptions = [
-    { value: "Math", label: "Math" },
-    { value: "Science", label: "Science" },
-    { value: "History", label: "History" },
-    { value: "English", label: "English" },
-  ];
-
-  return(
+  return (
     <div>
-      <Header/>
+      <Header />
       <div className = "AddNotePageContainer">
         <div className = "AddNoteContent">
           <div className = "AddNote">
@@ -49,13 +49,14 @@ function AddNotePage() {
           </div>
           <div className = "CourseSelector">
             <Dropdown
-              options = {courseOptions}
-              defaultOption = {courseOptions[0].value}
+              options = {CourseOptions}
+              defaultOption = {CourseOptions[0].course}
               onOptionSelect = {HandleCourseSelect}
             />
           </div>
           <div className = "TextField">
-            <h3>Write note:</h3>
+            <h3 style = {{ display: Add ? "none" : "block" }}>Write note:</h3>
+            <h3 style = {{ display: Added ? "none" : "block" }}>Note added! Add more notes:</h3>
             <textarea
               id = "ta1"
               name = "Text1"
