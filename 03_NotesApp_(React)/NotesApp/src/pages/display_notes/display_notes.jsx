@@ -8,18 +8,30 @@ import "./display_notes.css";
 function DisplayNotesPage() {
     const navigate = useNavigate();
     const [selectedCourse, setSelectedCourse] = useState("");
+    const [ShowNotes, setShowNotes] = useState(false);
 
     function DisplayNotes() {
-
-    }
-
-    const HandleCourseSelect = (selectedOption) => {
-        setSelectedCourse(selectedOption);
-    };
+        setShowNotes(true);
+        const courseName = selectedCourse;
+        const course = CourseOptions.find((c) => c.course == courseName);
+        if (!course) {
+          return <div className = "Please">Please select a course to show it's notes. {courseName}</div>;
+        }
+        return(
+            <div className = "Note">
+                <h2>Notes for course {courseName}:</h2>
+                <ul>
+                    {course.notes.map((note, index) => (
+                        <li key = {index}>{note}</li>
+                    ))}
+                </ul>
+            </div>
+        );
+      }
 
     return(
         <div>
-            <Header/>
+            <Header />
             <div className = "DisplayNotesPageContainer">
                 <div className = "DisplayNotesContent">
                     <div className = "DisplayNotes">
@@ -29,20 +41,14 @@ function DisplayNotesPage() {
                         <Dropdown
                             options = {CourseOptions}
                             defaultOption = {CourseOptions[0].course}
-                            onOptionSelect = {HandleCourseSelect}
+                            onOptionSelect = {setSelectedCourse}
                         />
-                        <button onClick = {DisplayNotes}>Display notes</button>
                     </div>
-                    <div className = "NotesDisplayCase">
-                        <h3>{selectedCourse.course} notes:</h3>
-                        <ul>
-                            {selectedCourse.notes.map((note, index) => (
-                                <li key = {index}>{note}</li>
-                            ))}
-                        </ul>
+                    <div className = "NotesDisplayCase" style = {{ display: ShowNotes ? "block" : "none" }}>
+                        <DisplayNotes/>
                     </div>
-                    <div className = "BackButton">
-                        <button onClick={() => navigate("/")}>Back</button>
+                    <div className="BackButton">
+                        <button onClick = {() => navigate("/")}>Back</button>
                     </div>
                 </div>
             </div>
