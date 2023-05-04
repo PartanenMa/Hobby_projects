@@ -10,12 +10,67 @@
 }
 
 .AddCourseContent {
-    background-color: blue;
     height: 100%;
     width: 60%;
+    overflow: hidden;
 }
 
-.AddCourseContent button {
+.AddCourse {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.AddCourse h2{
+    color: white;
+    font-size: 50px;
+}
+
+.CourseInput {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.CourseInput h3 {
+    color: white;
+}
+
+.CourseInput input {
+    height: 30px;
+    width: 60%;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.CourseInput button {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 50px;
+    width: 170px;
+    font-size: 30px;
+}
+
+.CourseInput button:hover {
+    background-color: gray;
+    transition: background-color 500ms ease-in-out;
+}
+
+.BackButton {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.BackButton button {
     background-color: black;
     color: white;
     border: 1px solid white;
@@ -25,7 +80,7 @@
     font-size: 30px;
 }
 
-.AddCourseContent button:hover {
+.BackButton button:hover {
     background-color: gray;
     transition: background-color 500ms ease-in-out;
 }
