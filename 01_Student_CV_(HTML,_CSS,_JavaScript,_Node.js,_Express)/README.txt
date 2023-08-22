@@ -1,10 +1,8 @@
 VS Code instructions:
 
-This is a full stack web application made using HTML, CSS and
-JavaScript on the frontend, and Node.js and Express on the backend. Open the 
-"Project" folder in VS Code, then run the application on the 
-VS Code terminal with the "node ." command, and click the link 
-"Front page: http://localhost:8000" on the terminal to view the 
-web page.
+1. Install NPM packages (SKIP THIS STEP IF NPM PACKAGES ALREADY INSTALLED):
+npm install
 
-Thank you for your time!
+2. Run program:
+cd Project
+node .
